@@ -1,4 +1,4 @@
-@login-test @sanity
+@Login @Sanity
 Feature: Login Feature Testing
   In order to validate successful login
   I need to login with valid credentials

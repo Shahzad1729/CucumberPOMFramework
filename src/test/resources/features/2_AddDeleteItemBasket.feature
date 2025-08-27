@@ -1,4 +1,4 @@
-@add-delete-item @sanity
+@AddDeleteItem @Sanity
 Feature: Validate Add and Delete feature of Basket
   In order to add and successfully delete an item from the basket
   I need to visit Sweets tab

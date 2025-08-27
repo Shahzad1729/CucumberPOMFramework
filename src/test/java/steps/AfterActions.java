@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,7 +21,12 @@ public class AfterActions {
             scenario.attach(screenshotBytes, "image/png", "Failed Step Screenshot");
         }
 
-        SeleniumDriver.getExtentReports().flush();
         SeleniumDriver.tearDown();
+    }
+
+    @AfterAll
+    public static void flushReport()
+    {
+        SeleniumDriver.getExtentReports().flush();
     }
 }

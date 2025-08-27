@@ -4,6 +4,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.PageFactory;
 import pages.locators.BasketPageLocators;
 import utils.SeleniumDriver;
+import utils.Utilities;
+
+import java.io.IOException;
 
 public class BasketPageActions {
 

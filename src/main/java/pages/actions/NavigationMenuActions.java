@@ -4,6 +4,9 @@ import com.aventstack.extentreports.Status;
 import org.openqa.selenium.support.PageFactory;
 import pages.locators.NavigationMenuLocators;
 import utils.SeleniumDriver;
+import utils.Utilities;
+
+import java.io.IOException;
 
 public class NavigationMenuActions {
 
@@ -14,21 +17,25 @@ public class NavigationMenuActions {
         PageFactory.initElements(SeleniumDriver.getDriver(), navigationMenuLocators);
     }
 
-    public void goToSweetsPage() {
+    public void goToSweetsPage() throws IOException {
         navigationMenuLocators.sweetsTab.click();
+        Utilities.captureScreenshot("Sweets Page");
     }
 
-    public void goToAboutPage() {
+    public void goToAboutPage() throws IOException {
         navigationMenuLocators.aboutTab.click();
+        Utilities.captureScreenshot("About Page");
     }
 
-    public void goToLoginPage() {
+    public void goToLoginPage() throws IOException {
         SeleniumDriver.getExtentTest().log(Status.INFO,"Going to Login Page");
         navigationMenuLocators.loginTab.click();
+        Utilities.captureScreenshot("Login Page");
     }
 
-    public void goToBasketPage() {
+    public void goToBasketPage() throws IOException {
         navigationMenuLocators.basketTab.click();
+        Utilities.captureScreenshot("Basket Page");
     }
 
     public String getBasketCount() {

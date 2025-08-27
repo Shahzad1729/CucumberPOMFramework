@@ -4,6 +4,9 @@ import com.aventstack.extentreports.Status;
 import org.openqa.selenium.support.PageFactory;
 import pages.locators.LoginPageLocators;
 import utils.SeleniumDriver;
+import utils.Utilities;
+
+import java.io.IOException;
 
 public class LoginPageActions {
 
@@ -29,8 +32,8 @@ public class LoginPageActions {
         loginPageLocators.loginBtn.click();
     }
 
-    public String getLoggedInUserName() {
-        SeleniumDriver.getExtentTest().log(Status.INFO,"Getting logged in username");
+    public String getLoggedInUserName() throws IOException {
+        Utilities.captureScreenshot("Getting logged in username");
         return loginPageLocators.loggedInUserName.getText();
     }
 

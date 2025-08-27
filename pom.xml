@@ -77,7 +77,8 @@
                 <configuration>
                     <testFailureIgnore> false </testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>src/test/resources/runner/debug.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/runner/TestSuite_Cucumber_${Type}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
